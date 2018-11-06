@@ -503,8 +503,8 @@ def runs_exper(exp,epoc,lag):
 # In[ ]:
 
 def main():
-	for e in(3,5,15):
-		for l in (3,15,30,60,1000,2000):	
+#	for e in(3,5,15):
+		for l in (3,15):	
 	                for x in(1,2,3,4,5):
 		                exp=x
 		                epoc=20
