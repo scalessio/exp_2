@@ -3,7 +3,7 @@
 
 # # Multivariate Multisteps Timeseries Forecast With LSTM
 # #### This script use the time series of the data of France98 to predict the Number of Request in the servers in the future. The data are pre processed and stored as CSV files. In each files we have the information minute per minute of the number of the Request recoded in the servers.  We want to use this data to predict the traffic domand within the next 3 minutes. As we know by the "Time Series Analysis" we can use the data as timeseries and training a Recurrent neural network to forecast the information.
-# #### The first part is to load the data. After that we "Prepare the data" to be analyzed as Time Series. 
+#### The first part is to load the data. After that we "Prepare the data" to be analyzed as Time Series. 
 # #### 1) Detrend the data (If s necessary). This procedure is not necessary with our data as we see with the ADF test the data are Stationary and we can go forward.
 # #### 2)Scale the data. The data used in the neural Network is scaled. We use the MinMax scaler with value [0,1] to train the LSTM and predict the data
 # #### 3)Trasform as supervised problem. This part is described below.
@@ -503,7 +503,12 @@ def runs_exper(exp,epoc,lag):
 # In[ ]:
 
 def main():
+
+#	for e in(3,5,15):
+#		for l in (3,15):	
+
 #	for e in(5,15):
+<<<<<<< HEAD
 #	for l in (60,1000):	
 #	for x in(3,4):
 	exp=4
@@ -512,6 +517,16 @@ def main():
 	lag =2000 
 	print("	Run Experiment N %d, lag%d, epoch %d" %(exp,lag,epoc))
 	runs_exper(exp,epoc,lag)
+=======
+#	for l in (3,15,30,60):	
+#	for x in(3):
+		exp=5
+
+		epoc=3
+		lag =2000 
+		print("Run Experiment N %d, lag%d, epoch %d" %(exp,lag,epoc))
+		runs_exper(exp,epoc,lag)
+>>>>>>> aa827d6b0bd1c79f66d3c36aba7654ab996fe7b1
 		
 main()
 

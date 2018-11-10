@@ -503,12 +503,12 @@ def runs_exper(exp,epoc,lag):
 # In[ ]:
 
 def main():
-        for x in in(1,2,3):
+        for x in (1,2,3):
                 exp=x
                 epoc=20
                 lag = 2000
                 print("Run Experiment N %d, lag%d, epoch %d" %(exp,lag,epoc))
-                #runs_exper(exp,epoc,lag)	
+                runs_exper(exp,epoc,lag)	
 main()
 
 
